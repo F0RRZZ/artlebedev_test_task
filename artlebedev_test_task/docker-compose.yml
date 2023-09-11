@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    env_file:
+      - .env.docker
+    restart: always
+
+  web:
+    build: .
+    command: >
+      sh -c "
+      sleep 1 &&
+      python manage.py migrate &&
+      python parser.py &&
+      python manage.py runserver 0.0.0.0:8000
+      "
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
