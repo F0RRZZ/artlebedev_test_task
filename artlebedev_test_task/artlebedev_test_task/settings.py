@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     # installed apps
     'rest_framework',
     # created apps
+    'api.apps.ApiConfig',
     'parks.apps.ParksConfig',
 ]
 
