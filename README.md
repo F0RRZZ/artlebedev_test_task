@@ -167,7 +167,7 @@ Content-Type: application/json
 #### Запрос
 
 ```
-PUT /api/v1/parks/3/
+PUT /api/v1/parks/6/
 Content-Type: application/json
 
 {
