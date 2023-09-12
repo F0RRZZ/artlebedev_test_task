@@ -6,7 +6,24 @@ import environ
 import psycopg2
 
 
+def is_park_in_db(park_info: tuple):
+    cursor.execute(
+        """
+        SELECT *
+        FROM parks_park
+        WHERE name = %s AND description = %s
+        """,
+        (park_info[0], park_info[1]),
+    )
+    result = cursor.fetchall()
+    if result:
+        return True
+    return False
+
+
 def add_park_to_db(park_info: tuple):
+    if is_park_in_db(park_info):
+        return
     cursor.execute(
         """
         INSERT INTO parks_park
