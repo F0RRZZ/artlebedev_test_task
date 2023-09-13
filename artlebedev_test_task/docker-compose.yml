@@ -8,7 +8,8 @@ services:
     restart: always
 
   web:
-    build: .
+    build: ./
+    image: maratkhagazheev/artlebedev-web:latest
     command: >
       sh -c "
       sleep 1 &&
