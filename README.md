@@ -237,7 +237,7 @@ GET /api/v1/parks/?page=2&page_size=20
 1. Склонируйте репозиторий
 
 ```shell
-git clone https://github.com/F0RRZZ/reviewer.git
+git clone https://github.com/F0RRZZ/artlebedev_test_task.git
 ```
 
 2. Скачайте и установите Docker
